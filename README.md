@@ -17,7 +17,7 @@ Rainfall Prediction is the application of science and technology to predict the 
 ## Program:
 
 Developed By Team Members:
-1.Manoj Guna Sundar Tell.
+1.Manoj Guna Sundar Tella.
 2.P.Siva Naga Nithin.
 3.D.Amarnath Reddy.
 
