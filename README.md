@@ -95,12 +95,9 @@ print(f'There are {nRow} rows and {nCol} columns')
 ```
 df2.head(5)
 ```
-```
 plotPerColumnDistribution(df2, 10, 5)
 ```
-```
 plotCorrelationMatrix(df2, 8)
-```
 ```
 plotScatterMatrix(df2, 20, 10)
 ```
