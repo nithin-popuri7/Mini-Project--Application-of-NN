@@ -1,6 +1,6 @@
 # Mini-Project--Application-of-NN
 ## Project Title:
-### Rainfall Prediction.
+Rainfall Prediction.
 ## Project Description
 Rainfall Prediction is the application of science and technology to predict the amount of rainfall over a region. It is important to exactly determine the rainfall for effective use of water resources, crop productivity and pre-planning of water structures.
 ## Algorithm:
@@ -15,22 +15,21 @@ Rainfall Prediction is the application of science and technology to predict the 
 5.Study the final output.
 
 ## Program:
-
+```
 Developed By Team Members:
 1.Manoj Guna Sundar Tella.
 2.P.Siva Naga Nithin.
 3.D.Amarnath Reddy.
-
-
-
+```
+```
 from mpl_toolkits.mplot3d import Axes3D
 from sklearn.preprocessing import StandardScaler
 import matplotlib.pyplot as plt
 import numpy as np
 import os
 import pandas as pd
-
-
+```
+```
 def plotPerColumnDistribution(df, nGraphShown, nGraphPerRow):
     nunique = df.nunique()
     df = df[[col for col in df if nunique[col] > 1 and nunique[col] < 50]] 
@@ -51,8 +50,8 @@ def plotPerColumnDistribution(df, nGraphShown, nGraphPerRow):
         plt.title(f'{columnNames[i]} (column {i})')
     plt.tight_layout(pad = 1.0, w_pad = 1.0, h_pad = 1.0)
     plt.show()
-
-
+```
+```
 def plotCorrelationMatrix(df, graphWidth):
     filename = df.dataframeName
     df = df.dropna('columns') 
@@ -69,8 +68,8 @@ def plotCorrelationMatrix(df, graphWidth):
     plt.colorbar(corrMat)
     plt.title(f'Correlation Matrix for {filename}', fontsize=15)
     plt.show()
-
-
+```
+```
 def plotScatterMatrix(df, plotSize, textSize):
     df = df.select_dtypes(include =[np.number])
     df = df.dropna('columns')
@@ -85,26 +84,26 @@ def plotScatterMatrix(df, plotSize, textSize):
         ax[i, j].annotate('Corr. coef = %.3f' % corrs[i, j], (0.8, 0.2), xycoords='axes fraction', ha='center', va='center', size=textSize)
     plt.suptitle('Scatter and Density Plot')
     plt.show()
-
-
+```
+```
 nRowsRead = 1000
 df2 = pd.read_csv('rainfall.csv', delimiter=',', nrows = nRowsRead)
 df2.dataframeName = 'rainfall in india 1901-2015.csv'
 nRow, nCol = df2.shape
 print(f'There are {nRow} rows and {nCol} columns')
-
-
+```
+```
 df2.head(5)
-
-
+```
+```
 plotPerColumnDistribution(df2, 10, 5)
-
-
+```
+```
 plotCorrelationMatrix(df2, 8)
-
-
+```
+```
 plotScatterMatrix(df2, 20, 10)
-
+```
 ## Output:
 ![nnp1](https://user-images.githubusercontent.com/94883876/205504768-b658c180-f751-43c9-94b8-dc4f5efd2a04.jpg)
 ![nnp2](https://user-images.githubusercontent.com/94883876/205504779-c830234e-0a49-41e6-bf75-5a3162f9e37c.jpg)
